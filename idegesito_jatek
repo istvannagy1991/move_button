@@ -1,0 +1,20 @@
+from tkinter import *
+import random
+
+def kattintas(event): 
+    randx = random.randint(1,400)
+    randy = random.randint(1,400)
+    gomb.place(x=randx,y=randy)
+
+
+win = Tk()
+win.geometry("500x500")
+win.title("Color Switch")
+win['bg']='green'
+
+gomb = Button(win,bg='red',text='Nyomd meg')
+gomb.place(x=200,y=200)
+gomb.bind('<Button-1>',kattintas)
+
+
+win.mainloop()
